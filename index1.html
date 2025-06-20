@@ -153,26 +153,22 @@
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
   }
 header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
   background-color: #1e1e1e;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center; /* Tengah horizontal */
+  align-items: center;
+  position: relative;
   border-bottom: 1px solid #333;
 }
 
 .logo {
-  font-size: 1.8em;
-  font-weight: bold;
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
   color: #55ccff;
   text-decoration: none;
-  font-family: 'Georgia', serif;
-  letter-spacing: 1px;
   transition: color 0.3s ease;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
 }
 
 .menu-icon {
@@ -182,13 +178,23 @@ header {
   color: white;
   cursor: pointer;
 }
+.logo-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo-img {
+  height: 60px; /* atau ukuran lain sesuai keinginan */
+  filter: brightness(1000%); /* untuk logo putih tampak terang di background gelap */
+}
 </style>
 </head>
 <body>
 
 <header>
-  <a href="index.html" class="logo">Beautiful Minddd</a>
-  <div class="menu-icon" onclick="toggleMenu()">&#8942;</div>
+  <div class="logo-container">
+    <img src="logo.png" href="index.html" class="logo-img">
+  </div>
 </header>
 
 <div id="sideMenu" class="side-menu">
@@ -279,12 +285,6 @@ header {
   <span>Refleksi</span>
   <span>Filosofi</span>
 </div>
-
-<footer>
-  unknown name – 20 Juni 2025<br>
-  © 2025 Artikel Refleksi | Tema: Iman dan Realitas
-</footer>
-
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -298,12 +298,17 @@ header {
     */
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
-    s.src = 'https://amunaki.disqus.com/embed.js';
+    s.src = 'https://ebook-nest.github.io';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<footer>
+  unknown name – 20 Juni 2025<br>
+  © 2025 Artikel Refleksi | Tema: Iman dan Realitas
+</footer>
 
 <script>
   function toggleMenu() {
