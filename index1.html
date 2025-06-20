@@ -173,20 +173,62 @@ header {
 
 .menu-icon {
   position: absolute;
-  right: 20px;
+  right: 10px;
   font-size: 24px;
   color: white;
   cursor: pointer;
 }
 .logo-container {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .logo-img {
-  height: 130px; /* atau ukuran lain sesuai keinginan */
+  height: 80px; /* atau ukuran lain sesuai keinginan */
   filter: brightness(1000%); /* untuk logo putih tampak terang di background gelap */
 }
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .audio-player {
+    padding: 12px;
+    font-size: 0.9em;
+  }
+
+  #playPauseBtn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #seekSlider {
+    height: 30px;
+  }
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 16px;
+}
+#playPauseBtn {
+  padding: 12px 24px;
+  font-size: 1.1em;
+}
+img, audio {
+  max-width: 100%;
+  height: auto;
+}
+
+
 </style>
 </head>
 <body>
@@ -198,7 +240,6 @@ header {
     </a>
   </div>
 </header>
-
 
 <div id="sideMenu" class="side-menu">
   <a href="#">Beranda</a>
